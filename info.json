@@ -1,0 +1,23 @@
+{
+  "name": "RichBlood",
+  "version": "0.0.1",
+  "factorio_version": "1.1",
+  "title": "Rich Blood",
+  "description": "Build factory on the blood of your enemies.\n\nBiters blood coagulates into crystals when exposed to air. These blood crystals can be simply smelted for resources, or liquefied into blood for more advanced processing.\n\nLater, plant biter farms for some 100% organic, free-range, sustainable blood production.\n\nRequires Krastorio2. Compatible with BZ mods, SE, and Armoured/Cold/Explosive Biters.",
+  "author": "tuxnux21",
+  "dependencies": [
+    "base >= 1.1.2",
+    "Krastorio2 >= 1.2.11",
+    "?aai-industry >= 0.5.13",
+    "?space-exploration >= 0.5.112",
+    "?ArmouredBiters >= 1.1.5",
+    "?Cold_biters >= 1.1.1",
+    "?Explosive_biters >= 1.1.35",
+    "?bzaluminum >= 0.1.4",
+    "?bzcarbon >= 0.1.5",
+    "?bzlead >= 1.0.3",
+    "?bztungsten >= 0.5.8",
+    "?bzzirconium >= 0.5.6",
+    "?bztitanium >= 1.0.8"
+  ]
+}
