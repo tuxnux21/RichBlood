@@ -120,12 +120,6 @@ if mods["bzlead"] then
   table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "lead-ore", probability = 0.95, amount = 4 * richness })
 end
 
-if mods["bzcarbon"] then
-  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.10, amount = 1 * richness })
-  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.20, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.40, amount = 4 * richness })
-end
-
 if mods["bzzirconium"] then
   table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "zircon", probability = 0.20, amount = 1 * richness })
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "zircon", probability = 0.30, amount = 2 * richness })
@@ -136,6 +130,12 @@ if mods["bztungsten"] then
   table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.10, amount = 1 * richness })
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.20, amount = 2 * richness })
   table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.40, amount = 4 * richness })
+end
+
+if mods["bzcarbon"] then
+  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.10, amount = 1 * richness })
+  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.20, amount = 2 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.40, amount = 4 * richness })
 end
 
 if mods["bztitanium"] then
