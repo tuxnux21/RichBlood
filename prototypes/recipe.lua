@@ -544,7 +544,7 @@ data:extend({
     ingredients =
     {
       { type = "fluid", name = "blood", amount = 100 },
-      { type = "fluid", name = "nitrogen", amount = 10 },
+      { type = "fluid", name = "nitrogen", amount = 50 },
       { type = "item", name = "empty-cryogenic-barrel", amount = 1 },
     },
     results =
@@ -1068,7 +1068,7 @@ if mods["bzzirconium"] then
 		ingredients =
 		{
 		  { type = "item", name = "zircon", amount = 1 },
-		  { type = "fluid", name = "blood", amount = 20 },
+		  { type = "fluid", name = "blood", amount = 30 },
 		  { type = "fluid", name = "water", amount = 80 },
 		},
 		results =
@@ -1085,7 +1085,7 @@ if mods["bztitanium"] then
 	  {
 		type = "recipe",
 		name = "blood-to-titanium-ore",
-		order = "b[blood]-29[zircon]",
+		order = "b[blood]-29[titanium]",
 		group = "intermediate-products",
 		subgroup = "raw-resource",
 		category = "electrolysis",
