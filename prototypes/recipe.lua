@@ -144,12 +144,12 @@ data:extend({
     {
       { type = "item", name = "coal", amount = 1 },
       { type = "fluid", name = "blood", amount = 8 },
-      { type = "fluid", name = "water", amount = 20 },
+      { type = "fluid", name = "water", amount = 80 },
     },
     results =
     {
       { type = "item", name = "coal", amount = 5 },
-      { type = "fluid", name = "dirty-water", amount = 20 },
+      { type = "fluid", name = "dirty-water", amount = 80 },
     },
   },
 
@@ -183,12 +183,12 @@ data:extend({
     {
       { type = "item", name = "stone", amount = 1 },
       { type = "fluid", name = "blood", amount = 8 },
-      { type = "fluid", name = "water", amount = 20 },
+      { type = "fluid", name = "water", amount = 80 },
     },
     results =
     {
       { type = "item", name = "stone", amount = 5 },
-      { type = "fluid", name = "dirty-water", amount = 20 },
+      { type = "fluid", name = "dirty-water", amount = 80 },
     },
   },
 
@@ -222,12 +222,12 @@ data:extend({
     {
       { type = "item", name = "iron-ore", amount = 1 },
       { type = "fluid", name = "blood", amount = 10 },
-      { type = "fluid", name = "water", amount = 40 },
+      { type = "fluid", name = "water", amount = 100 },
     },
     results =
     {
       { type = "item", name = "iron-ore", amount = 5 },
-      { type = "fluid", name = "dirty-water", amount = 40 },
+      { type = "fluid", name = "dirty-water", amount = 100 },
     },
   },
 
@@ -261,12 +261,12 @@ data:extend({
     {
       { type = "item", name = "copper-ore", amount = 1 },
       { type = "fluid", name = "blood", amount = 12 },
-      { type = "fluid", name = "water", amount = 50 },
+      { type = "fluid", name = "water", amount = 120 },
     },
     results =
     {
       { type = "item", name = "copper-ore", amount = 5 },
-      { type = "fluid", name = "dirty-water", amount = 50 },
+      { type = "fluid", name = "dirty-water", amount = 120 },
     },
   },
 
@@ -299,13 +299,13 @@ data:extend({
     ingredients =
     {
       { type = "item", name = "raw-rare-metals", amount = 1 },
-      { type = "fluid", name = "blood", amount = 20 },
-      { type = "fluid", name = "water", amount = 100 },
+      { type = "fluid", name = "blood", amount = 18 },
+      { type = "fluid", name = "water", amount = 180 },
     },
     results =
     {
       { type = "item", name = "raw-rare-metals", amount = 5 },
-      { type = "fluid", name = "dirty-water", amount = 100 },
+      { type = "fluid", name = "dirty-water", amount = 180 },
     },
   },
 
@@ -339,12 +339,12 @@ data:extend({
     {
       { type = "item", name = "uranium-ore", amount = 1 },
       { type = "fluid", name = "blood", amount = 20 },
-      { type = "fluid", name = "water", amount = 100 },
+      { type = "fluid", name = "water", amount = 200 },
     },
     results =
     {
-      { type = "item", name = "uranium-ore", amount = 25 },
-      { type = "fluid", name = "dirty-water", amount = 100 },
+      { type = "item", name = "uranium-ore", amount = 5 },
+      { type = "fluid", name = "dirty-water", amount = 200 },
     },
   },
 
@@ -481,7 +481,7 @@ data:extend({
     ingredients =
     {
       { type = "fluid", name = "water", amount = 100 },
-      { type = "item", name = "blood-crystal-powder", amount = 5 },
+      { type = "item", name = "blood-crystal-powder", amount = 4 },
     },
     results =
     {
@@ -857,13 +857,13 @@ if not mods["space-exploration"] then
 		ingredients =
 		{
 		  { type = "item", name = "raw-imersite", amount = 1 },
-		  { type = "fluid", name = "blood", amount = 25 },
-		  { type = "fluid", name = "water", amount = 200 },
+		  { type = "fluid", name = "blood", amount = 24 },
+		  { type = "fluid", name = "water", amount = 240 },
 		},
 		results =
 		{
 		  { type = "item", name = "raw-imersite", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 200 },
+		  { type = "fluid", name = "dirty-water", amount = 240 },
 		},
 	  },
 	})
@@ -901,12 +901,12 @@ if mods["bzaluminum"] then
 		{
 		  { type = "item", name = "aluminum-ore", amount = 1 },
 		  { type = "fluid", name = "blood", amount = 10 },
-		  { type = "fluid", name = "water", amount = 60 },
+		  { type = "fluid", name = "water", amount = 100 },
 		},
 		results =
 		{
 		  { type = "item", name = "aluminum-ore", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 60 },
+		  { type = "fluid", name = "dirty-water", amount = 100 },
 		},
 	  },
 	})
@@ -943,12 +943,12 @@ if mods["bzlead"] then
 		{
 		  { type = "item", name = "lead-ore", amount = 1 },
 		  { type = "fluid", name = "blood", amount = 10 },
-		  { type = "fluid", name = "water", amount = 60 },
+		  { type = "fluid", name = "water", amount = 100 },
 		},
 		results =
 		{
 		  { type = "item", name = "lead-ore", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 60 },
+		  { type = "fluid", name = "dirty-water", amount = 100 },
 		},
 	  },
 	})
@@ -984,13 +984,13 @@ if mods["bzcarbon"] then
 		ingredients =
 		{
 		  { type = "item", name = "flake-graphite", amount = 1 },
-		  { type = "fluid", name = "blood", amount = 15 },
-		  { type = "fluid", name = "water", amount = 60 },
+		  { type = "fluid", name = "blood", amount = 12 },
+		  { type = "fluid", name = "water", amount = 120 },
 		},
 		results =
 		{
 		  { type = "item", name = "flake-graphite", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 60 },
+		  { type = "fluid", name = "dirty-water", amount = 120 },
 		},
 	  },
 	})
@@ -1026,13 +1026,13 @@ if mods["bztungsten"] then
 		ingredients =
 		{
 		  { type = "item", name = "tungsten-ore", amount = 1 },
-		  { type = "fluid", name = "blood", amount = 20 },
-		  { type = "fluid", name = "water", amount = 80 },
+		  { type = "fluid", name = "blood", amount = 14 },
+		  { type = "fluid", name = "water", amount = 140 },
 		},
 		results =
 		{
 		  { type = "item", name = "tungsten-ore", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 80 },
+		  { type = "fluid", name = "dirty-water", amount = 140 },
 		},
 	  },
 	})
@@ -1068,13 +1068,13 @@ if mods["bzzirconium"] then
 		ingredients =
 		{
 		  { type = "item", name = "zircon", amount = 1 },
-		  { type = "fluid", name = "blood", amount = 30 },
-		  { type = "fluid", name = "water", amount = 80 },
+		  { type = "fluid", name = "blood", amount = 14 },
+		  { type = "fluid", name = "water", amount = 140 },
 		},
 		results =
 		{
 		  { type = "item", name = "zircon", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 80 },
+		  { type = "fluid", name = "dirty-water", amount = 140 },
 		},
 	  },
 	})
@@ -1110,13 +1110,13 @@ if mods["bztitanium"] then
 		ingredients =
 		{
 		  { type = "item", name = "titanium-ore", amount = 1 },
-		  { type = "fluid", name = "blood", amount = 40 },
-		  { type = "fluid", name = "water", amount = 120 },
+		  { type = "fluid", name = "blood", amount = 20 },
+		  { type = "fluid", name = "water", amount = 200 },
 		},
 		results =
 		{
 		  { type = "item", name = "titanium-ore", amount = 5 },
-		  { type = "fluid", name = "dirty-water", amount = 120 },
+		  { type = "fluid", name = "dirty-water", amount = 200 },
 		},
 	  },
 	})

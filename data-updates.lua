@@ -19,7 +19,7 @@ data:extend({
     },
     results =
     {
-      { type = "item", name = "stone", probability = 0.5, amount = 1 * richness },
+      { type = "item", name = "stone", probability = 0.75, amount = 1 * richness },
       { type = "item", name = "coal", probability = 0.75, amount = 1 * richness },
       { type = "item", name = "iron-ore", probability = 0.75, amount = 1 * richness },
       { type = "item", name = "copper-ore", probability = 0.75, amount = 1 * richness },
@@ -44,11 +44,11 @@ data:extend({
     },
     results =
     {
-      { type = "item", name = "stone", probability = 0.6, amount = 2 * richness },
+      { type = "item", name = "stone", probability = 0.80, amount = 2 * richness },
       { type = "item", name = "coal", probability = 0.80, amount = 2 * richness },
-      { type = "item", name = "iron-ore", probability = 0.85, amount = 2 * richness },
-      { type = "item", name = "copper-ore", probability = 0.85, amount = 2 * richness },
-      { type = "item", name = "raw-rare-metals", probability = 0.05, amount = 2 * richness },
+      { type = "item", name = "iron-ore", probability = 0.80, amount = 2 * richness },
+      { type = "item", name = "copper-ore", probability = 0.80, amount = 2 * richness },
+      { type = "item", name = "raw-rare-metals", probability = 0.20, amount = 2 * richness },
     },
     icon = "__RichBlood__/graphics/icons/blood-crystal-medium.png",
     icon_size = 64,
@@ -70,8 +70,10 @@ data:extend({
     },
     results =
     {
-      { type = "item", name = "iron-ore", probability = 0.95, amount = 4 * richness },
-      { type = "item", name = "copper-ore", probability = 0.95, amount = 4 * richness },
+      { type = "item", name = "stone", probability = 0.85, amount = 4 * richness },
+      { type = "item", name = "coal", probability = 0.85, amount = 4 * richness },
+      { type = "item", name = "iron-ore", probability = 0.85, amount = 4 * richness },
+      { type = "item", name = "copper-ore", probability = 0.85, amount = 4 * richness },
       { type = "item", name = "raw-rare-metals", probability = 0.25, amount = 4 * richness },
       { type = "item", name = "uranium-ore", probability = 0.25, amount = 4 * richness },
     },
@@ -106,39 +108,49 @@ if not mods["space-exploration"] then
   table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "raw-imersite", probability = 0.20, amount = 4 * richness })
 end
 
+local bz_blood_bonus = 0
 
 -- BZ mods
 if mods["bzaluminum"] then
   table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "aluminum-ore", probability = 0.75, amount = 1 * richness })
-  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "aluminum-ore", probability = 0.85, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "aluminum-ore", probability = 0.95, amount = 4 * richness })
+  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "aluminum-ore", probability = 0.80, amount = 2 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "aluminum-ore", probability = 0.85, amount = 4 * richness })
+  bz_blood_bonus = bz_blood_bonus + 4
 end
 
 if mods["bzlead"] then
   table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "lead-ore", probability = 0.75, amount = 1 * richness })
-  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "lead-ore", probability = 0.85, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "lead-ore", probability = 0.95, amount = 4 * richness })
+  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "lead-ore", probability = 0.80, amount = 2 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "lead-ore", probability = 0.85, amount = 4 * richness })
+  bz_blood_bonus = bz_blood_bonus + 4
 end
 
 if mods["bzzirconium"] then
-  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "zircon", probability = 0.20, amount = 1 * richness })
+  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "zircon", probability = 0.25, amount = 1 * richness })
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "zircon", probability = 0.30, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "zircon", probability = 0.50, amount = 4 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "zircon", probability = 0.35, amount = 4 * richness })
+  bz_blood_bonus = bz_blood_bonus + 4
 end
 
 if mods["bztungsten"] then
-  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.10, amount = 1 * richness })
+  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.15, amount = 1 * richness })
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.20, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.40, amount = 4 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "tungsten-ore", probability = 0.25, amount = 4 * richness })
+  bz_blood_bonus = bz_blood_bonus + 4
 end
 
 if mods["bzcarbon"] then
-  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.10, amount = 1 * richness })
+  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.15, amount = 1 * richness })
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.20, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.40, amount = 4 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "flake-graphite", probability = 0.25, amount = 4 * richness })
+  bz_blood_bonus = bz_blood_bonus + 4
 end
 
 if mods["bztitanium"] then
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "titanium-ore", probability = 0.10, amount = 2 * richness })
-  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "titanium-ore", probability = 0.25, amount = 4 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "titanium-ore", probability = 0.15, amount = 4 * richness })
+  -- not adding bonus for titanium for balance purposes
 end
+
+if bz_blood_bonus ~= 0 then
+  data.raw.recipe["blood-crystal-powder-liquefaction"].results = {{ type = "fluid", name = "blood", amount = 20 + bz_blood_bonus }}
