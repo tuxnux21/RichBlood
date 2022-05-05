@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
-Date: 2022-05-04
+Date: 2022-05-05
   Changes:
     - Add Stone and Coal to Big blood crystal smelting.
     - Rebalance vanilla and BZ ores chances from blood crystals smelting.
     - Rebalance blood costs of some Catalytic electrolysis recipes.
+    - Increase Dirty Water byproduct of Catalytic electrolysis recipes.
     - Blood crystal powder liquefaction now yields more blood per BZ mod installed. This is to prevent blood crystals smelting from becoming far better choice compared to blood recipes when BZ mods are installed.
     - Reduce Blood crystal powder cost in Wood recipe from 5 to 4.
     - Increase Nitrogen cost from 10 to 50 for Blood plasma barrel.
