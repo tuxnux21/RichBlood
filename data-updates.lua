@@ -154,3 +154,4 @@ end
 
 if bz_blood_bonus ~= 0 then
   data.raw.recipe["blood-crystal-powder-liquefaction"].results = {{ type = "fluid", name = "blood", amount = 20 + bz_blood_bonus }}
+end
