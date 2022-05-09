@@ -76,23 +76,35 @@ for k, v in pairs(data.raw.module) do
     for _, recipe in ipairs({"biomass-from-blood-tissue"}) do
       table.insert(v.limitation, recipe)
     end
-    for _, recipe in ipairs({"blood-to-aluminum-ore"}) do
-      table.insert(v.limitation, recipe)
+    if mods["bzaluminum"] then
+	  for _, recipe in ipairs({"blood-to-aluminum-ore"}) do
+	    table.insert(v.limitation, recipe)
+	  end
+	end
+	if mods["bzlead"] then
+	  for _, recipe in ipairs({"blood-to-lead-ore"}) do
+	    table.insert(v.limitation, recipe)
+	  end
     end
-    for _, recipe in ipairs({"blood-to-lead-ore"}) do
-      table.insert(v.limitation, recipe)
+    if mods["bzcarbon"] then
+      for _, recipe in ipairs({"blood-to-flake-graphite"}) do
+        table.insert(v.limitation, recipe)
+      end
     end
-    for _, recipe in ipairs({"blood-to-flake-graphite"}) do
-      table.insert(v.limitation, recipe)
+    if mods["bztungsten"] then
+      for _, recipe in ipairs({"blood-to-tungsten-ore"}) do
+        table.insert(v.limitation, recipe)
+      end
     end
-    for _, recipe in ipairs({"blood-to-tungsten-ore"}) do
-      table.insert(v.limitation, recipe)
+    if mods["bzzirconium"] then
+      for _, recipe in ipairs({"blood-to-zircon"}) do
+        table.insert(v.limitation, recipe)
+      end
     end
-    for _, recipe in ipairs({"blood-to-zircon"}) do
-      table.insert(v.limitation, recipe)
-    end
-    for _, recipe in ipairs({"blood-to-titanium-ore"}) do
-      table.insert(v.limitation, recipe)
+    if mods["bztitanium"] then
+      for _, recipe in ipairs({"blood-to-titanium-ore"}) do
+        table.insert(v.limitation, recipe)
+      end
     end
   end
 end
