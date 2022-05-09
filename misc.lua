@@ -76,6 +76,24 @@ for k, v in pairs(data.raw.module) do
     for _, recipe in ipairs({"biomass-from-blood-tissue"}) do
       table.insert(v.limitation, recipe)
     end
+    for _, recipe in ipairs({"blood-to-aluminum-ore"}) do
+      table.insert(v.limitation, recipe)
+    end
+    for _, recipe in ipairs({"blood-to-lead-ore"}) do
+      table.insert(v.limitation, recipe)
+    end
+    for _, recipe in ipairs({"blood-to-flake-graphite"}) do
+      table.insert(v.limitation, recipe)
+    end
+    for _, recipe in ipairs({"blood-to-tungsten-ore"}) do
+      table.insert(v.limitation, recipe)
+    end
+    for _, recipe in ipairs({"blood-to-zircon"}) do
+      table.insert(v.limitation, recipe)
+    end
+    for _, recipe in ipairs({"blood-to-titanium-ore"}) do
+      table.insert(v.limitation, recipe)
+    end
   end
 end
 
