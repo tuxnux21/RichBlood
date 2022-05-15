@@ -382,7 +382,7 @@ data:extend({
     group = "intermediate-products",
     subgroup = "fluid-recipes",
     category = "chemistry",
-    energy_required = 30,
+    energy_required = 24,
     enabled = false,
     main_product = "",
     icons =
@@ -404,7 +404,6 @@ data:extend({
     {
       { type = "item", name = "spawner-egg", amount = 1 },
       { type = "item", name = "coke", amount = 20 },
-      { type = "item", name = "biomass", amount = 5 },
       { type = "fluid", name = "steam", amount = 600 },
     },
     results =
@@ -421,7 +420,7 @@ data:extend({
     group = "intermediate-products",
     subgroup = "fluid-recipes",
     category = "chemistry",
-    energy_required = 15,
+    energy_required = 12,
     enabled = false,
     main_product = "",
     icons =
@@ -443,7 +442,6 @@ data:extend({
     {
       { type = "item", name = "lab-grown-embryo", amount = 1 },
       { type = "item", name = "coke", amount = 10 },
-      { type = "item", name = "biomass", amount = 5 },
       { type = "fluid", name = "steam", amount = 300 },
     },
     results =
@@ -497,7 +495,7 @@ data:extend({
     group = "intermediate-products",
     subgroup = "raw-material",
     category = "bioprocessing",
-    energy_required = 20,
+    energy_required = 30,
     enabled = false,
     icons =
 	{
@@ -517,12 +515,12 @@ data:extend({
     ingredients =
     {
       { type = "item", name = "blood-tissue", amount = 5 },
-      { type = "item", name = "wood", amount = 10 },
-      { type = "fluid", name = "oxygen", amount = 100 },
+      { type = "item", name = "wood", amount = 5 },
+      { type = "fluid", name = "oxygen", amount = 50 },
     },
     results =
     {
-      { type = "item", name = "biomass", amount = 10 },
+      { type = "item", name = "biomass", amount = 5 },
     },
   },
 
@@ -535,7 +533,7 @@ data:extend({
     group = "intermediate-products",    
     subgroup = "fluid-recipes",
     category = "blood-centrifuging",
-    energy_required = 8,
+    energy_required = 60,
     enabled = false,
     allow_decomposition = true,
     main_product = "",
@@ -550,7 +548,7 @@ data:extend({
     results =
     {
       { type = "item", name = "blood-plasma-barrel", amount = 1 },
-      { type = "item", name = "blood-tissue", amount = 20 },
+      { type = "item", name = "blood-tissue", amount = 5 },
     },
   },
   
@@ -677,7 +675,7 @@ data:extend({
       },
     },
     icon_size = 64,
-    energy_required = 8,
+    energy_required = 30,
     enabled = false,
     main_product = "",
     allow_decomposition = false,
@@ -722,7 +720,7 @@ data:extend({
       },
     },
     icon_size = 64,
-    energy_required = 8,
+    energy_required = 30,
     enabled = false,
     main_product = "",
     allow_decomposition = false,
@@ -735,7 +733,8 @@ data:extend({
     results =
     {
       { type = "item", name = "stem-cells", amount = 5 },
-      { type = "item", name = "lab-grown-embryo", amount = 1, probability = 0.99 },
+      { type = "item", name = "lab-grown-embryo", amount = 1, probability = 0.80 },
+      { type = "item", name = "empty-lab-capsule", amount = 1, probability = 0.20 }
     },
   },
 
@@ -755,15 +754,15 @@ data:extend({
     allow_decomposition = false,
     ingredients =
     {
-      { type = "item", name = "biomass", amount = 10 },
-      { type = "item", name = "stem-cells", amount = 10 },
+      { type = "item", name = "biomass", amount = 5 },
+      { type = "item", name = "stem-cells", amount = 5 },
       { type = "item", name = "empty-lab-capsule", amount = 5 },
       { type = "item", name = "blood-plasma-barrel", amount = 1 },
     },
     results =
     {
       { type = "item", name = "lab-grown-embryo", amount = 5 },
-      { type = "item", name = "empty-cryogenic-flask", amount = 10 },
+      { type = "item", name = "empty-cryogenic-flask", amount = 5 },
       { type = "item", name = "empty-cryogenic-barrel", amount = 1 },
     },
   },

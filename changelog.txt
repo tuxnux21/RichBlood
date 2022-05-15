@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2022-05-15
+  Changes:
+    - Rework crude oil production loop to better balance the ratio of required machines and make things more OCD-friendly. Specific changes below.
+    - Blood Separation: Increase crafting time from 8s to 60s. Produces 5 Blood Tissue instead of 20.
+    - Biomass from Blood Tissue: Increase crafting time from 20s to 30s. Requires 5 Wood instead of 10. Requires 50 Oxygen instead of 100. Produces 5 Biomass instead of 10.
+    - Stem cells from lab-grown embryo: Increase crafting time from 8s to 30s. Now has 80% chance to return Lab-grown embryo and 20% chance to return Empty lab capsule (no more Empty lab capsule sink). Due to how the game's % result works, the recipe will sometimes return nothing or will return both embryo and empty capsule. Not ideal, but over time the 80%-20% ratio will be true.
+    - Stem cells from spawner egg: Increase crafting time from 8s to 30s.
+    - Lab-grown embryo: Requires 5 Biomass instead of 10. Requires 5 Stem cell flasks instead of 10.
+    - Lab-grown embryo liquefaction: Reduce crafting time from 15 to 12. No longer requires 5 Biomass.
+    - Spawner egg liquefaction: Reduce crafting time from 30 to 24. No longer requires 5 Biomass.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2022-05-09
   Changes:
