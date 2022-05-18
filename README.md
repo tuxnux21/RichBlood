@@ -38,4 +38,8 @@ Armoured/Cold/Explosive biters drop twice the amount of blood crystals because o
 ## Mods that may go well with Rich Blood
 [Rampant Evolution](https://mods.factorio.com/mod/RampantEvolution) by Veden. This mod allows fine-tuning of what affects evolution. For example, it can reduce evolution by a flat amount for each killed biter. This would slow down evolution in the early game, but will be negligible in the late game because evolution reduction on kill doesn't scale with biter size. Rampant Evolution also allows for control of evolution using pollution. For example, pollution absorption by spawners could be reducing evolution, and pollution absorption by terrain and trees could be increasing evolution. Combined with biter farms, this can incentivise player to pave the terrain and place air filters strategically so that most pollution is absorbed by spawners.
 
+
+## Localization
+- [Aquilo](https://mods.factorio.com/user/Aquilo) (ru)
+
 This mod uses modified assets of Krastorio2.
