@@ -59,11 +59,7 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "blood-electrolysis"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "kr-grow-wood-with-water"
-      },
+      }
     },
     prerequisites = {"blood-crystal-powder-liquefaction"},
     unit = {
@@ -429,25 +425,33 @@ data:extend({
 
 
 
--- Blood crystal crushing unlocks
---table.insert(data.raw.technology["kr-crusher"].effects, {type = "unlock-recipe", recipe = "blood-crystal-small-crushing"})
---table.insert(data.raw.technology["kr-crusher"].effects, {type = "unlock-recipe", recipe = "blood-crystal-medium-crushing"})
---table.insert(data.raw.technology["kr-crusher"].effects, {type = "unlock-recipe", recipe = "blood-crystal-big-crushing"})
+if settings.startup["modify_wood_recipes"].value == true then
 
--- Remove kr-grow-wood-with-water from Greenhouse because we are adding Electrolyte to the recipe. Instead, Greenhouse unlocks a new inefficient wood growing recipe with Blood crystal powder.
-for k, effect in pairs(data.raw.technology["kr-greenhouse"].effects) do
-  if effect.recipe == "kr-grow-wood-with-water" then
-    table.remove(data.raw.technology["kr-greenhouse"].effects, k)
-    break
-  end
+	-- Greenhouse: unlock a new wood growing recipe with Water and Blood crystal powder for very early game
+	table.insert(data.raw.technology["kr-greenhouse"].effects, {type = "unlock-recipe", recipe = "grow-wood-with-blood-crystal-powder"})
+	
+	-- Remove kr-grow-wood-with-water from Greenhouse because we are adding Electrolyte to the recipe. Electrolyte is not available at this point in the game.
+	for k, effect in pairs(data.raw.technology["kr-greenhouse"].effects) do
+	  if effect.recipe == "kr-grow-wood-with-water" then
+		table.remove(data.raw.technology["kr-greenhouse"].effects, k)
+		break
+	  end
+	end
+	
+	-- Unlock kr-grow-wood-with-water in Blood Electrolysis tech instead of Greenhouse tech. Electrolyte is added as an ingredient in data-final-fixes because of AAI Industry
+	table.insert(data.raw.technology["blood-electrolysis"].effects, {type = "unlock-recipe", recipe = "kr-grow-wood-with-water"})
+else
+	-- Unlock grow-wood-with-electrolyte in Blood Electrolysis tech if the setting to modify wood recipes is not enabled.
+	table.insert(data.raw.technology["blood-electrolysis"].effects, {type = "unlock-recipe", recipe = "grow-wood-with-electrolyte"})
 end
-
--- Greenhouse: unlock a new wood growing recipe with Water and Blood crystal powder for very early game
-table.insert(data.raw.technology["kr-greenhouse"].effects, {type = "unlock-recipe", recipe = "grow-wood-with-blood-crystal-powder"})
 
 -- Spawner egg to Crude oil unlock
 table.insert(data.raw.technology["oil-processing"].effects, {type = "unlock-recipe", recipe = "spawner-egg-liquefaction"})
 
+-- Blood crystal crushing unlocks
+--table.insert(data.raw.technology["kr-crusher"].effects, {type = "unlock-recipe", recipe = "blood-crystal-small-crushing"})
+--table.insert(data.raw.technology["kr-crusher"].effects, {type = "unlock-recipe", recipe = "blood-crystal-medium-crushing"})
+--table.insert(data.raw.technology["kr-crusher"].effects, {type = "unlock-recipe", recipe = "blood-crystal-big-crushing"})
 
 -- BZ mods
 if mods["bzaluminum"] then

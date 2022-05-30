@@ -868,6 +868,47 @@ if not mods["space-exploration"] then
 	})
 end
 
+if settings.startup["modify_wood_recipes"].value == false then
+-- Wood from Electrolyte and Water
+	data:extend({
+	  {
+		type = "recipe",
+		name = "grow-wood-with-electrolyte",
+		order = "a[wood]-04",
+		group = "intermediate-products",
+		subgroup = "raw-resource",
+		category = "growing",
+		energy_required = 30,
+		enabled = false,
+		icons =
+		{
+			{
+				icon = data.raw.item["wood"].icon,
+				icon_size = data.raw.item["wood"].icon_size
+			},
+			{
+				icon = data.raw.fluid["electrolyte"].icon,
+				icon_size =	data.raw.fluid["electrolyte"].icon_size,
+				scale = 0.25 * (data.raw.item["wood"].icon_size/data.raw.fluid["electrolyte"].icon_size),
+				shift = {9, -12}
+			}
+		},
+		icon_size = data.raw.item["wood"].icon_size,
+		allow_decomposition = false,
+		ingredients =
+		{
+		  { type = "fluid", name = "electrolyte", amount = 100 },
+		  { type = "fluid", name = "water", amount = 200 },
+		},
+		results =
+		{
+		  { type = "item", name = "wood", amount = 40 },
+		},
+	  }
+  	})
+end
+
+
 -- BZ mods
 if mods["bzaluminum"] then
 	data:extend({

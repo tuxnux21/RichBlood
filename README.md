@@ -22,7 +22,7 @@ Alternatively, you can get creative with belts picking up loot. They are a solid
 
 
 ## Blood, Wood, and Matter
-This mod changes wood recipes so that they require a blood product. The goal here is to remove the "infinite matter with zero input" loop in Krastorio2. Additionally, the goal is for blood recipes to not become obsolete once matter recipes are unlocked. The idea is that matter recipes could be used for unwanted blood byproducts or for any excess of a resource.
+This mod by default changes wood recipes so that they require a blood product. The goal here is to remove the "infinite matter with zero input" loop in Krastorio2. Additionally, the goal is for blood recipes to not become obsolete once matter recipes are unlocked. The idea is that matter recipes could be used for unwanted blood byproducts or for any excess of a resource. If you don't want to have wood recipes changed, there is a setting that disables the changes.
 
 ## Biter Farms
 The mod allows placement of two tiers of biter spawners for blood farming. There's a caveat though. Spawners generate two kinds of biters: the "guardians" which stay close to the spawner and don't require pollution to spawn, and the "group attack" biters which spawn from absorbed pollution. The "guardians" attack on proximity, and they are the main source of blood in the early game if playing without starting resources. These "guardians", however, become "frozen" once player moves too far away from the spawner. The game freezes them to conserve resources. The pollution-induced "group attack" biters don't have this limitation. Design farms accordingly.

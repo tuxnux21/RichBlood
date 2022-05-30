@@ -2,18 +2,28 @@
 local wood = data.raw.item["wood"]
 local electrolyte = data.raw.fluid["electrolyte"]
 local fertilizer = data.raw.item["fertilizer"]
-data.raw.recipe["kr-grow-wood-with-water"].icons = {
-  {icon = wood.icon, icon_size = wood.icon_size},
-  {icon = electrolyte.icon, icon_size = electrolyte.icon_size, scale = 0.25, shift = {9, -10}}
-  }
-data.raw.recipe["kr-grow-wood-with-water"].icon_size = wood.icon_size
+local water = data.raw.fluid["water"]
 
 data.raw.recipe["kr-grow-wood-plus"].icons = {
-  {icon = wood.icon, icon_size = wood.icon_size},
-  {icon = fertilizer.icon, icon_size = fertilizer.icon_size, scale = 0.25, shift = {9, -10}}
-  }
+	{icon = wood.icon, icon_size = wood.icon_size},
+	{icon = fertilizer.icon, icon_size = fertilizer.icon_size, scale = 0.25, shift = {9, -10}}
+	}
 data.raw.recipe["kr-grow-wood-plus"].icon_size = wood.icon_size
 
+if settings.startup["modify_wood_recipes"].value == true then
+
+	data.raw.recipe["kr-grow-wood-with-water"].icons = {
+	  {icon = wood.icon, icon_size = wood.icon_size},
+	  {icon = electrolyte.icon, icon_size = electrolyte.icon_size, scale = 0.25, shift = {9, -10}}
+	  }
+	data.raw.recipe["kr-grow-wood-with-water"].icon_size = wood.icon_size
+else
+	data.raw.recipe["kr-grow-wood-with-water"].icons = {
+	  {icon = wood.icon, icon_size = wood.icon_size},
+	  {icon = water.icon, icon_size = water.icon_size, scale = 0.25, shift = {9, -10}}
+	  }
+	data.raw.recipe["kr-grow-wood-with-water"].icon_size = wood.icon_size
+end
 
 -- Add Petroleum gas icon to K2 Biomass recipe
 local petroleum_gas = data.raw.fluid["petroleum-gas"]
@@ -112,7 +122,7 @@ end
 -- Organization
 data.raw.recipe["sand"].subgroup = "raw-material"
 data.raw.recipe["kr-grow-wood-with-water"].order = "a[wood]-02"
-data.raw.recipe["kr-grow-wood-plus"].order = "a[wood]-03"
+data.raw.recipe["kr-grow-wood-plus"].order = "a[wood]-05"
 data.raw.capsule["first-aid-kit"].group = "combat"
 data.raw.recipe["first-aid-kit"].group = "combat"
 data.raw.capsule["first-aid-kit"].subgroup = "gun"

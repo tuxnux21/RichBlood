@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2022-05-30
+  Changes:
+    - EN: This update requires MANUAL INTERVENTION. If you are using a wood recipe from Electrolyte, you need to flip input (R) on your greenhouses after this update.
+    - RU: ВНИМАНИЕ! Если используйте рецепт древесины из Электролита, пожалуйста поменяйте ввод жидкостей в теплицах (R) после этого обновления.
+    - Add a setting to not modify wood recipes. You can use this setting if you want to add the mod to an existing factory and do not want to redo wood production. Or use this setting if you just prefer to not have wood recipes changed.
+    - Wood from Electrolyte recipe now always takes 30 seconds and requires 200 Water (previously AAI Industry was changing the values).
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2022-05-18
   Changes:
