@@ -1161,3 +1161,45 @@ if mods["bztitanium"] then
 	  },
 	})
 end
+
+if mods["bztin"] then
+	data:extend({
+	  {
+		type = "recipe",
+		name = "blood-to-tin-ore",
+		order = "b[blood]-19[tin]",
+		group = "intermediate-products",
+		subgroup = "raw-resource",
+		category = "electrolysis",
+		energy_required = 4,
+		enabled = false,
+		allow_decomposition = false,
+		main_product = "",
+		icons =
+		{
+			{
+				icon = "__bztin__/graphics/icons/tin-ore.png",
+				icon_size = 64
+			},
+			{
+				icon = "__RichBlood__/graphics/icons/lightning.png",
+				icon_size =  128,
+				scale = 0.4,
+				shift = {-1, 4}
+			}
+		},
+		icon_size = 64,
+		ingredients =
+		{
+		  { type = "item", name = "tin-ore", amount = 1 },
+		  { type = "fluid", name = "blood", amount = 10 },
+		  { type = "fluid", name = "water", amount = 100 },
+		},
+		results =
+		{
+		  { type = "item", name = "tin-ore", amount = 5 },
+		  { type = "fluid", name = "dirty-water", amount = 100 },
+		},
+	  },
+	})
+end

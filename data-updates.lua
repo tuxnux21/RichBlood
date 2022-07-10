@@ -125,6 +125,13 @@ if mods["bzlead"] then
   bz_blood_bonus = bz_blood_bonus + 4
 end
 
+if mods["bztin"] then
+  table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "tin-ore", probability = 0.75, amount = 1 * richness })
+  table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "tin-ore", probability = 0.80, amount = 2 * richness })
+  table.insert(data.raw.recipe["blood-crystal-big-smelting"].results, { type = "item", name = "tin-ore", probability = 0.85, amount = 4 * richness })
+  bz_blood_bonus = bz_blood_bonus + 4
+end
+
 if mods["bzzirconium"] then
   table.insert(data.raw.recipe["blood-crystal-small-smelting"].results, { type = "item", name = "zircon", probability = 0.25, amount = 1 * richness })
   table.insert(data.raw.recipe["blood-crystal-medium-smelting"].results, { type = "item", name = "zircon", probability = 0.30, amount = 2 * richness })

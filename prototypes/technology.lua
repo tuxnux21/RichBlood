@@ -618,3 +618,30 @@ if mods["bztitanium"] then
 	  },
 	})
 end
+
+if mods["bztin"] then
+	data:extend({
+	  {
+	    type = "technology",
+	    name = "catalytic-electrolysis-tin-ore",
+	    icon_size = 256,
+	    icon_mipmaps = 1,
+	    icon = "__RichBlood__/graphics/technology/catalytic-electrolysis-tin-ore.png",
+	    effects = {
+	      {
+	        type = "unlock-recipe",
+	        recipe = "blood-to-tin-ore"
+	      },
+	    },
+	    prerequisites = {"catalytic-electrolysis-stone", "catalytic-electrolysis-coal"},
+	    unit = {
+	      count = 50,
+	      ingredients = {
+	        { "basic-tech-card", 1 },
+	        { "automation-science-pack", 1 },
+	      },
+	      time = 45
+	    },
+	  },
+	})
+end

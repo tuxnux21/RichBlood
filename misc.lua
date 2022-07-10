@@ -25,13 +25,21 @@ else
 	data.raw.recipe["kr-grow-wood-with-water"].icon_size = wood.icon_size
 end
 
--- Add Petroleum gas icon to K2 Biomass recipe
-local petroleum_gas = data.raw.fluid["petroleum-gas"]
+-- Add Petroleum gas or Organotins icon to K2 Biomass recipe
 local biomass = data.raw.item["biomass"]
-data.raw.recipe["kr-biomass-growing"].icons = {
-  {icon = biomass.icon, icon_size = biomass.icon_size},
-  {icon = petroleum_gas.icon, icon_size = petroleum_gas.icon_size, scale = 0.25, shift = {9, -10}}
-  }
+if not mods["bztin"] then
+	local petroleum_gas = data.raw.fluid["petroleum-gas"]
+	data.raw.recipe["kr-biomass-growing"].icons = {
+	  {icon = biomass.icon, icon_size = biomass.icon_size},
+	  {icon = petroleum_gas.icon, icon_size = petroleum_gas.icon_size, scale = 0.25, shift = {9, -10}}
+	  }
+else
+	local organotins = data.raw.fluid["organotins"]
+	data.raw.recipe["kr-biomass-growing"].icons = {
+	  {icon = biomass.icon, icon_size = biomass.icon_size},
+	  {icon = organotins.icon, icon_size = organotins.icon_size, scale = 0.25, shift = {9, -10}}
+	  }
+end
 
 -- Allow productivity modules in recipes
 for k, v in pairs(data.raw.module) do
@@ -76,9 +84,6 @@ for k, v in pairs(data.raw.module) do
       for _, recipe in ipairs({"blood-to-raw-imersite"}) do
         table.insert(v.limitation, recipe)
       end
-    end
-    for _, recipe in ipairs({"quartz"}) do
-      table.insert(v.limitation, recipe)
     end
     for _, recipe in ipairs({"kr-biomass-growing"}) do
       table.insert(v.limitation, recipe)
