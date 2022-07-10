@@ -1,6 +1,6 @@
 
 ## Overview
-This is a mod for Krastorio2 that is meant to be played with low or no resources. Blood acts as a universal resource that can be processed into any basic resource, similar to the late-game Matter. In most cases, there is more than one way to obtain a resource from blood.
+This is a mod for Krastorio2 that is meant to be played with low or no resources. Blood acts as a universal resource that can be processed into any basic resource, similar to the late-game Matter.
 
 This mod does not make any changes to resource generation or biters difficulty, so it's up to the player to create a challenge. This mod also does not remove mining equipment.
 Resource Spawner Overhaul (RSO) is recommended as it can be configured to generate very sparse resources, and also has an option for no starting resources. (Why do we always conveniently crash next to ore patches anyway?)
